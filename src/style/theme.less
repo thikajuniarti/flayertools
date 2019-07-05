@@ -3,6 +3,7 @@
 //theme colors
 @primary : #2d8dee;
 @secondary: #f5f5f5;
+@disabled : #cfdbe0;
 @default: @secondary;
 @text-primary: #fff;
 @text-secondary: @primary;
@@ -84,7 +85,25 @@
   color: #fff;
 }
 
+.card-primary{
+  background: @primary;
+  color: #fff;
+}
+
+
 .primary-layout{
   background: @primary;
   color: #fff;
 }
+.center-side-menu{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-primary{
+  color: @heading-color;
+}
+

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Menu, Layout, Icon } from 'antd';
+import { Menu, Layout, Icon, Card, Avatar } from 'antd';
 
 const { Header } = Layout
+const { SubMenu } = Menu
 
 class Topbar extends Component {
   render(){
@@ -17,9 +18,19 @@ class Topbar extends Component {
           mode="horizontal"
           style={{ lineHeight: '74px', float:"right", border:0, background:'transparent' }}
         >
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
+        <SubMenu
+          title={
+            <span className="submenu-title-wrapper">
+               <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={32} style={{ marginRight: 10}}/>
+              Emanuel Mojave
+            </span>
+          }
+        >
+          <Card bordered={false}>
+            Emaanuel Mojave
+          </Card>
+          <Menu.Item key="setting:1">Option 1</Menu.Item>
+        </SubMenu>
       </Menu>
       </Header>
     )

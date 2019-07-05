@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import {Layout, Menu, Icon, Avatar} from 'antd';
+import {Layout, Menu, Icon} from 'antd';
 
 const { Sider  } = Layout;
 
@@ -7,9 +7,9 @@ class Sidebar extends Component{
   render(){
     return (
       <>
-        <Sider collapsed={true} className='primary-layout' style={{ paddingTop: 100}}>
+        <Sider collapsed={true} className='primary-layout' style={{height: '100vh', position: 'fixed', left:0}}>
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} className='primary-layout'>
+          <Menu theme="dark" className='primary-layout center-side-menu'>
             <Menu.Item key="1">
               <Icon type="book" />
               <span>Content</span>
