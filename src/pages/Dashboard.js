@@ -1,7 +1,23 @@
 import React, { Component} from 'react';
-import {Typography, Button, Row, Col, Card, Icon, Switch, Statistic, Avatar} from 'antd';
-import MiniareaChart from './../components/MiniareaChart';
+import {Typography, Button, Row, Col, Card, Icon, Switch, Statistic, Avatar, List, Tag} from 'antd';
+import MinibarChart from '../components/MinibarChart';
+import SimplePieChart from '../components/SimplePieChart';
 const { Text } = Typography
+
+const data = [
+  {
+    name: 'Irfan Ardiansyah',
+    email: 'irfa.ards@mail.com'
+  },
+  {
+    name: 'Mega Khumara',
+    email: 'mega.ards@mail.com'
+  },
+  {
+    name: 'Nyoman Khumara',
+    email: 'nyoman.ards@mail.com'
+  },
+];
 
 class Dasboard extends Component {
   render(){
@@ -9,7 +25,7 @@ class Dasboard extends Component {
       <>
         <Row gutter={24}>
             <Col span={24}>
-              <Card bordered={false} className="card-primary-gradient">
+              <Card bordered={false} className="card-primary-gradient shadow">
                 <Row>
                   <Col span={12}>
                     <Row type="flex" justify="start">
@@ -60,65 +76,49 @@ class Dasboard extends Component {
             </Col>
           </Row><br />
           
-          <Row gutter={24}>
-            <Col span={12}>
-              <Row>
-                <Col span={8}>
-                  <p>
-                    <h3 style={{ marginBottom:0}}>Leads on July</h3>
-                    <small>Number of lead on current month</small>
-                  </p>
-                  <div style={{ textAlign: "center"}}>
-                    <span style={{ fontSize: 60}} className='text-primary'>
+          <Row gutter={24} type="flex">
+            <Col span={5}>
+              <Card title="Leads of this month" bordered={false} className="shadow">
+                <p style={{ textAlign: "center"}} >
+                   <span style={{ fontSize: 60}} className='text-primary'>
                       123
-                    </span><br />
-                    Lead of current motnh
-                  </div>
-                </Col>
-                <Col span={16}>
-                  <p>
-                    <h3 style={{ marginBottom:0}}>Monthly Leads 
-                      <span style={{ float: "right"}} >
-                        <Button type="link">See detail</Button>
-                      </span>
-                    </h3>
-                    <small>Summary of monthly lead and current month</small>
-                  </p>
-                  <MiniareaChart height={130}/>
-                </Col>
-              </Row>
-            </Col>
-
-            <Col span={6}>
-              <Card bordered={false}>
-                <Row type="flex">
-                  <Col>
-                    <Icon type="file" style={{fontSize: 60}} theme='twoTone' twoToneColor="#2d8dee"/>
-                  </Col>
-                  <Col style={{marginLeft:10}}>
-                    Published Content<br />
-                    <Text className="text-primary" style={{ fontSize: 30}}>123</Text>
-                  </Col>  
-                </Row> 
+                   </span><br />
+                  Lead of current month
+                </p>
               </Card>
             </Col>
 
-            <Col span={6}>
-              <Card bordered={false}>
-                <Row type="flex">
-                  <Col>
-                    <Icon type="file-zip" theme="twoTone" twoToneColor="#2d8dee" style={{fontSize: 60}}/>
-                  </Col>
-                  <Col style={{marginLeft:10}}>
-                    Unpublished Content<br />
-                    <Text className="text-primary" style={{ fontSize: 30}}>123</Text>
-                  </Col>  
-                </Row> 
-              </Card>
+            <Col span={7}>
+              <p>
+                <h3 style={{ marginBottom:0}}>Monthly Leads 
+                  <span style={{ float: "right"}} >
+                    <Button type="link">See Detail</Button>
+                  </span>
+                </h3>
+              <small>Summary of monthly lead and current month</small>
+              </p>
+              <MinibarChart height={145}/>
             </Col>
-          
             
-          </Row><br /><br />
+            <Col span={5}>
+              <Card title="Published Content" bordered={false} className="shadow">
+                <p style={{ textAlign: "center"}} >
+                   <span style={{ fontSize: 60}} className='text-primary'>
+                      12
+                   </span><br />
+                  Published contents
+                </p>
+              </Card>
+            </Col>
+
+            <Col span={7}>
+              <Card title="Staff Summary" bordered={false} className="shadow">
+                <p>
+                   <SimplePieChart />
+                </p>
+              </Card>
+            </Col>
+          </Row><br />
           <p>
               <h3 style={{ marginBottom: 0}}>Popular Content - 4 items</h3>
               <small>Based of data lead in each contents</small>
@@ -128,6 +128,7 @@ class Dasboard extends Component {
             <Col span={6}>
               <Card
                 hoverable
+                className="shadow"
                 cover={<img alt="example" src="img.jpg" />}
                 actions={[
                   <Icon type="edit" />, <Icon type="delete" />, <Icon type="share-alt" />, <Icon type="copy" />]}
@@ -142,6 +143,7 @@ class Dasboard extends Component {
             <Col span={6}>
               <Card
                 hoverable
+                className="shadow"
                 cover={<img alt="example" src="img.jpg" />}
                 actions={[
                   <Icon type="edit" />, <Icon type="delete" />, <Icon type="share-alt" />, <Icon type="copy" />]}
@@ -156,6 +158,7 @@ class Dasboard extends Component {
             <Col span={6}>
               <Card
                 hoverable
+                className="shadow"
                 cover={<img alt="example" src="img.jpg" />}
                 actions={[
                   <Icon type="edit" />, <Icon type="delete" />, <Icon type="share-alt" />, <Icon type="copy" />]}
@@ -170,6 +173,7 @@ class Dasboard extends Component {
             <Col span={6}>
               <Card
                 hoverable
+                className="shadow"
                 cover={<img alt="example" src="img.jpg" />}
                 actions={[
                   <Icon type="edit" />, <Icon type="delete" />, <Icon type="share-alt" />, <Icon type="copy" />]}
@@ -181,7 +185,12 @@ class Dasboard extends Component {
               </Card>
             </Col>
           </Row>
-       
+
+          <Row gutter={24}>
+            <Col span={12}>
+             
+            </Col>
+          </Row>
       </>
     )
   }

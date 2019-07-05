@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-import { MiniBar, MiniArea } from "ant-design-pro/lib/Charts";
+import { MiniBar } from "ant-design-pro/lib/Charts";
 import moment from 'moment'
 
 const visitData = [];
@@ -11,12 +11,12 @@ for (let i = 0; i < 12; i += 1) {
   });
 }
 
-class MiniareaChart extends Component{
+class MinibarChart extends Component{
   render(){
     return(
-      <MiniArea height={this.props.height} data={visitData} />
+      <MiniBar color="#2d8dee" height={this.props.height} data={visitData} />
     )
   }
 }
 
-export default MiniareaChart
+export default MinibarChart

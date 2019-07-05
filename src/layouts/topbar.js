@@ -7,7 +7,7 @@ const { SubMenu } = Menu
 class Topbar extends Component {
   render(){
     return(
-      <Header style={{ background: 'transparent', border:0, padding: 0 }}>
+      <Header style={{ background: 'transparent', border:0, padding: 0, marginBottom:15 }}>
         <Icon
           className="trigger"
           type={"setting"}

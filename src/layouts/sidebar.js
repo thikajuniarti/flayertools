@@ -9,7 +9,7 @@ class Sidebar extends Component{
       <>
         <Sider collapsed={true} className='primary-layout' style={{height: '100vh', position: 'fixed', left:0}}>
           <div className="logo" />
-          <Menu theme="dark" className='primary-layout center-side-menu'>
+          <Menu theme="dark" className='primary-layout center-side-menu' style={{ background:'transparent'}}>
             <Menu.Item key="1">
               <Icon type="book" />
               <span>Content</span>

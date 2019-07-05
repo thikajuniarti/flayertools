@@ -2,6 +2,7 @@
 
 //theme colors
 @primary : #2d8dee;
+@secondary-blue:#e6f7ff;
 @secondary: #f5f5f5;
 @disabled : #cfdbe0;
 @default: @secondary;
@@ -81,8 +82,19 @@
 
 .card-primary-gradient{
   background: rgb(45,141,238);
-  background: linear-gradient(90deg, rgba(45,141,238,1) 0%, rgb(132, 0, 255) 100%);
+  background: linear-gradient(90deg, rgba(45,141,238,1) 0%, rgb(195, 0, 255) 100%);
   color: #fff;
+}
+
+.gradient-blue-red{
+  background: rgb(45,141,238);
+  background: linear-gradient(114deg, rgba(45,141,238,1) 0%, rgba(230,71,71,1) 100%);
+  color: #fff;
+}
+
+.primary-gradient-vertical{
+  background: rgb(45,141,238);
+  background: linear-gradient(114deg, rgba(45,141,238,1) 0%,  rgb(195, 0, 255) 100%);
 }
 
 .card-primary{
@@ -90,6 +102,9 @@
   color: #fff;
 }
 
+.card-margin-btm{
+  margin-bottom: 20px
+}
 
 .primary-layout{
   background: @primary;
@@ -107,3 +122,13 @@
   color: @heading-color;
 }
 
+.shadow{
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+  -moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+}
+
+.bg-grey{
+  background: @primary;
+  color: #fff;
+}
