@@ -1,0 +1,134 @@
+@import "~antd/dist/antd.less";
+
+//theme colors
+@primary : #2d8dee;
+@secondary-blue:#e6f7ff;
+@secondary: #f5f5f5;
+@disabled : #cfdbe0;
+@default: @secondary;
+@text-primary: #fff;
+@text-secondary: @primary;
+
+// base setting
+@primary-color: @primary;
+@link-color: @primary-color; 
+@font-size-base: 14px; 
+@heading-color: rgba(21, 39, 71, 0.85);
+@text-color: rgba(105, 122, 151, 0.65);
+@text-color-secondary : rgba(0, 0, 0, .45); 
+@disabled-color : rgba(0, 0, 0, .25); 
+@border-radius-base: 5px; 
+@border-color-base: #ececec; 
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); 
+
+// Buttons
+@btn-font-weight: 400;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @primary-color;
+
+@btn-default-color: @primary;
+@btn-default-bg: #fff;
+@btn-default-border: @primary;
+
+@btn-danger-color: @error-color;
+@btn-danger-bg: @background-color-base;
+@btn-danger-border: @border-color-base;
+
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: @border-color-base;
+
+@btn-padding-base: 0 @padding-md - 1px;
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-sm: @font-size-base;
+@btn-padding-lg: @btn-padding-base;
+@btn-padding-sm: 0 @padding-xs - 1px;
+
+@btn-height-base: 32px;
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+
+@btn-group-border: @primary-5;
+
+// Border color
+@border-color-base: #fcfcfc; // base border outline a component
+@border-color-split: hsv(0, 0, 91%); // split border inside a component
+@border-color-inverse: @white;
+@border-width-base: 1px; // width of the border for a component
+@border-style-base: solid; // style of a components border
+
+// card
+@card-head-color: @heading-color;
+@card-head-background: #fbfbfb;
+@card-head-padding: 16px;
+@card-inner-head-padding: 12px;
+@card-padding-base: 24px;
+@card-actions-background: @background-color-light;
+@card-background: #cfd8dc;
+@card-shadow: 2 2px 8px rgba(2, 2, 2, 0.1);
+@card-radius: 3px;
+
+.card-primary-gradient{
+  background: rgb(45,141,238);
+  background: linear-gradient(90deg, rgba(45,141,238,1) 0%, rgb(195, 0, 255) 100%);
+  color: #fff;
+}
+
+.gradient-blue-red{
+  background: rgb(45,141,238);
+  background: linear-gradient(114deg, rgba(45,141,238,1) 0%, rgba(230,71,71,1) 100%);
+  color: #fff;
+}
+
+.primary-gradient-vertical{
+  background: rgb(45,141,238);
+  background: linear-gradient(114deg, rgba(45,141,238,1) 0%,  rgb(195, 0, 255) 100%);
+}
+
+.card-primary{
+  background: @primary;
+  color: #fff;
+}
+
+.card-margin-btm{
+  margin-bottom: 20px
+}
+
+.primary-layout{
+  background: @primary;
+  color: #fff;
+}
+.center-side-menu{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-primary{
+  color: @heading-color;
+}
+
+.shadow{
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+  -moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.03);
+}
+
+.bg-grey{
+  background: @primary;
+  color: #fff;
+}
