@@ -3,10 +3,7 @@ import './style/theme.less';
 import {Layout } from 'antd';
 import Sidebar from './layouts/sidebar';
 import Topbar from './layouts/topbar';
-import ContentPagesPage from './pages/ContentPagesPage';
-import Dasboard from './pages/Dashboard';
-import LeadPage from './pages/LeadPage';
-import ContentDetailsPage from './pages/ContentDetailsPage';
+import ContentRouter from './layouts/ContentRouter';
 
 const { Content, Footer  } = Layout;
 
@@ -17,11 +14,11 @@ function App() {
       <Layout style={{ marginLeft: 90 }}>
         <Content style={{ padding: '0 50px' }}>
           <Topbar />
-          <ContentDetailsPage />
+          <ContentRouter />
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
-      
+
     </Layout>
   );
 }
