@@ -4,22 +4,8 @@ import MinibarChart from '../components/MinibarChart';
 import SimplePieChart from '../components/SimplePieChart';
 const { Text } = Typography
 
-const data = [
-  {
-    name: 'Irfan Ardiansyah',
-    email: 'irfa.ards@mail.com'
-  },
-  {
-    name: 'Mega Khumara',
-    email: 'mega.ards@mail.com'
-  },
-  {
-    name: 'Nyoman Khumara',
-    email: 'nyoman.ards@mail.com'
-  },
-];
-
-class Dasboard extends Component {
+const data = [{name: 'User', value: 14}, {name: 'Content Creator', value: 2}, {name: 'Admin', value: 2}];
+class Dashboard extends Component {
   render(){
     return(
       <>
@@ -114,7 +100,7 @@ class Dasboard extends Component {
             <Col span={7}>
               <Card title="Staff Summary" bordered={false} className="shadow">
                 <p>
-                   <SimplePieChart />
+                   <SimplePieChart data={data}/>
                 </p>
               </Card>
             </Col>
@@ -196,4 +182,4 @@ class Dasboard extends Component {
   }
 }
 
-export default Dasboard
+export default Dashboard

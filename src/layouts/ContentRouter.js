@@ -6,12 +6,17 @@ import ContentPagesPage from '../pages/ContentPagesPage';
 import LeadPage from '../pages/LeadPage';
 import Dashboard from '../pages/Dashboard';
 import ContentDetailsPage from '../pages/ContentDetailsPage';
+import DashboardOrg from '../pages/DashboardOrg';
+import OrganizationPage from '../pages/OrganizationPage';
+
 
 class ContentRouter extends Component {
   render(){
     return(
       <Router>
         <Route path="/" exact component={Dashboard} />
+        <Route path="/dashboard_org" exact component={DashboardOrg} />
+        <Route path="/organization" exact component={OrganizationPage} />
         <Route path="/contents" exact component={ContentPage} />
         <Route path="/leads" exact component={LeadPage} />
         <Route path="/pages" exact component={ContentPagesPage} />
