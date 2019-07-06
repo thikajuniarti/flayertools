@@ -1,13 +1,36 @@
 import React, { Component} from 'react';
-import { Row, Col, Card, Icon, Tooltip, Button, Select, Avatar} from 'antd';
+import { Row, Col, Card, Icon, Modal, Button, Select, Avatar, Form} from 'antd';
 import { Input } from 'antd';
+import new_lead from "../assets/img/new_lead.svg"
 
 const { Meta } = Card;
 const { Search } = Input;
-const InputGroup = Input.Group;
 const { Option } = Select;
 
 class LeadPage extends Component {
+  
+  state = {
+    loading: false,
+    visible: false,
+  };
+
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  handleOk = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false });
+    }, 3000);
+  };
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
+
   render(){
     return(
       <>
@@ -15,7 +38,7 @@ class LeadPage extends Component {
               <h3 style={{ marginBottom: 0}}>
                 Total Leads - 120 Leads
                 <span style={{ float:'right'}}>
-                  <Button type="primary" style={{ marginRight:10}} className="shadow">
+                    <Button type="primary" style={{ marginRight:10}} className="shadow" onClick={this.showModal}>
                       <Icon type="plus-circle" /> Create New Leads
                     </Button>
                     <Select defaultValue="Zhejiang" className="shadow" style={{ marginRight:10}}>
@@ -338,6 +361,43 @@ class LeadPage extends Component {
              
             </Col>
           </Row>
+
+          <Modal
+            visible={this.state.visible}
+            width={600}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={null}
+          >
+            <Form layout="vertical" hideRequiredMark><br />
+            <Row gutter={24}>
+              <Col span={10}>
+                <img src={new_lead} width={200} style={{ marginTop:50}} height="auto" />
+              </Col>
+              <Col span={14}>
+                <h3 style={{ marginBottom:0}}>New Lead Form</h3>
+                <small>Fill all lead form below</small>
+                <br /><br />
+                <Form.Item style={{ marginBottom:10}}>
+                  <Input placeholder="Fullname" className="input-form" prefix={<Icon type="user" />}/>
+                </Form.Item>
+
+                <Form.Item style={{ marginBottom:10}}>
+                  <Input placeholder="Email Address" className="input-form" prefix={<Icon type="mail" />}/>
+                </Form.Item>
+
+                <Form.Item style={{ marginBottom:10}}>
+                  <Input placeholder="Call Number" className="input-form" prefix={<Icon type="phone" />} />
+                </Form.Item><br />
+                <Button key="submit" type="primary" loading={this.state.loading} onClick={this.handleOk} style={{float: "left"}}>
+                  <Icon type="plus-circle" />
+                  Create Lead
+                </Button>
+              </Col>
+              </Row>
+              <br />
+            </Form>
+          </Modal>
       </>
     )
   }

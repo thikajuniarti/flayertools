@@ -12,17 +12,17 @@ class Sidebar extends Component{
           <Menu theme="dark" className='primary-layout center-side-menu' style={{ background:'transparent'}}>
             <Menu.Item key="1">
               <Icon type="book" />
-              <span>Content</span>
+              <a href="/contents">Content</a>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="user" />
-              <span>Leads</span>
+              <a href="/leads">Leads</a>
             </Menu.Item>
             <Menu.Item key="3">
               <Icon type="team" />
-              <span>Staff</span>
+              <a href="/staffs">Staff</a>
             </Menu.Item>
-            <Menu.Item key="3">
+            <Menu.Item key="4">
               <Icon type="logout" />
               <span>Logout</span>
             </Menu.Item>
