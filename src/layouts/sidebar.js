@@ -11,11 +11,15 @@ class Sidebar extends Component{
           <div className="logo" />
           <Menu theme="dark" className='primary-layout center-side-menu' style={{ background:'transparent'}}>
             <Menu.Item key="1">
+            <Icon type="star" />
+              <a href="/organization">Organization</a>
+            </Menu.Item>
+            <Menu.Item key="1">
               <Icon type="book" />
               <a href="/contents">Content</a>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="user" />
+              <Icon type="contacts" />
               <a href="/leads">Leads</a>
             </Menu.Item>
             <Menu.Item key="3">
