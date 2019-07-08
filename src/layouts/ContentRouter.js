@@ -8,6 +8,7 @@ import Dashboard from '../pages/Dashboard';
 import ContentDetailsPage from '../pages/ContentDetailsPage';
 import DashboardOrg from '../pages/DashboardOrg';
 import OrganizationPage from '../pages/OrganizationPage';
+import LoginPage from '../pages/LoginPage';
 
 
 class ContentRouter extends Component {
@@ -21,6 +22,7 @@ class ContentRouter extends Component {
         <Route path="/leads" exact component={LeadPage} />
         <Route path="/pages" exact component={ContentPagesPage} />
         <Route path="/detail" exact component={ContentDetailsPage} />
+        <Route path="/login" exact component={LoginPage} />
       </Router>
     )
   }
