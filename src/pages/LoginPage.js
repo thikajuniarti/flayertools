@@ -40,9 +40,7 @@ class LoginPage extends Component {
                       <Row style={{ marginTop: 3 }}>
                         <Col span={12} style={{ textAlign: "left" }}>
                           <Radio>
-                            <a className="login-form-forgot" href="">
-                              Remember Me
-                            </a>
+                            Remember Me
                           </Radio>
                         </Col>
                         <Col span={12} style={{ textAlign: "right" }}>

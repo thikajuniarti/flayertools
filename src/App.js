@@ -19,8 +19,8 @@ class App extends Component {
   render(){
     return (
       <>
-        {!this.state.status && <LoginPage onclick={this.changeStatus}/>}
-        {this.state.status && <Layout className="layout">
+        {/*!this.state.status && <LoginPage onclick={this.changeStatus}/>*/}
+        {!this.state.status && <Layout className="layout">
           <Sidebar />
           <Layout style={{ marginLeft: 90 }}>
             <Content style={{ padding: '0 50px' }}>
