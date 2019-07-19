@@ -2,10 +2,14 @@ import React, { Component} from 'react';
 import {Typography, Button, Row, Col, Card, Icon, Switch, Statistic, Avatar, List, Tag} from 'antd';
 import MinibarChart from '../components/MinibarChart';
 import SimplePieChart from '../components/SimplePieChart';
+import LoginContext from "../config/LoginContext";
+
 const { Text } = Typography
 
 const data = [{name: 'User', value: 14}, {name: 'Content Creator', value: 2}, {name: 'Admin', value: 2}];
 class Dashboard extends Component {
+  static contextType = LoginContext;
+
   render(){
     return(
       <>
@@ -20,11 +24,11 @@ class Dashboard extends Component {
                       </Col>
                       <Col>
                       <strong>PT DIRGANTARA RAHAYU CITRA PERMATA</strong><br />
-                        Emanuel Mojave <br />
+                        {this.context.user.name} <br />
                         <small>Administrator</small>
                       </Col>
                     </Row>
-                    
+
                   </Col>
                   <Col span={4}>
                     <Statistic
@@ -43,7 +47,7 @@ class Dashboard extends Component {
                       prefix={<Icon type="book" />}
                       suffix="contents"
                     />
-                    
+
                   </Col>
                   <Col span={4}>
                     <Statistic
@@ -53,15 +57,15 @@ class Dashboard extends Component {
                       prefix={<Icon type="team" />}
                       suffix="employees"
                     />
-                    
+
                   </Col>
                 </Row>
-                
-                
+
+
               </Card>
             </Col>
           </Row><br />
-          
+
           <Row gutter={24} type="flex">
             <Col span={5}>
               <Card title="Leads of this month" bordered={false} className="shadow">
@@ -76,7 +80,7 @@ class Dashboard extends Component {
 
             <Col span={7}>
               <p>
-                <h3 style={{ marginBottom:0}}>Monthly Leads 
+                <h3 style={{ marginBottom:0}}>Monthly Leads
                   <span style={{ float: "right"}} >
                     <Button type="link">See Detail</Button>
                   </span>
@@ -85,7 +89,7 @@ class Dashboard extends Component {
               </p>
               <MinibarChart height={145}/>
             </Col>
-            
+
             <Col span={5}>
               <Card title="Published Content" bordered={false} className="shadow">
                 <p style={{ textAlign: "center"}} >
@@ -109,7 +113,7 @@ class Dashboard extends Component {
               <h3 style={{ marginBottom: 0}}>Popular Content - 4 items</h3>
               <small>Based of data lead in each contents</small>
           </p>
-        
+
           <Row gutter={24}>
             <Col span={6}>
               <Card
@@ -122,7 +126,7 @@ class Dashboard extends Component {
                 <p>
                     <h4>Ini Adalah Judul ada.. <Switch checkedChildren="Publish" unCheckedChildren="Unpublish" defaultChecked style={{float:'right'}} /></h4>
                     <span style={{ marginRight:10}}><Icon type="user" /> 120</span> <span ><Icon type="info-circle" /> info</span>
-                    
+
                   </p>
               </Card>
             </Col>
@@ -137,7 +141,7 @@ class Dashboard extends Component {
                 <p>
                     <h4>Ini Adalah Judul ada.. <Switch checkedChildren="Publish" unCheckedChildren="Unpublish" defaultChecked style={{float:'right'}} /></h4>
                     <span style={{ marginRight:10}}><Icon type="user" /> 120</span> <span ><Icon type="info-circle" /> info</span>
-                    
+
                   </p>
               </Card>
             </Col>
@@ -152,7 +156,7 @@ class Dashboard extends Component {
                 <p>
                     <h4>Ini Adalah Judul ada.. <Switch checkedChildren="Publish" unCheckedChildren="Unpublish" defaultChecked style={{float:'right'}} /></h4>
                     <span style={{ marginRight:10}}><Icon type="user" /> 120</span> <span ><Icon type="info-circle" /> info</span>
-                    
+
                   </p>
               </Card>
             </Col>
@@ -174,7 +178,7 @@ class Dashboard extends Component {
 
           <Row gutter={24}>
             <Col span={12}>
-             
+
             </Col>
           </Row>
       </>
